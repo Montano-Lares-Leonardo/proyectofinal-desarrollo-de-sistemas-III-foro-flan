@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.proyectoflan.PublishController">
+   <children>
+      <MenuBar prefHeight="15.0" prefWidth="300.0" style="-fx-background-color: #470200;">
+        <menus>
+          <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #A12F2B;" text="↺" textFill="WHITE" />
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="376.0" prefWidth="300.0" style="-fx-background-color: #FFCE96;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="14.0" prefHeight="17.0" prefWidth="130.0" text="PUBLICAR" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label layoutX="38.0" layoutY="49.0" text="Título del Post" AnchorPane.leftAnchor="38.0" />
+            <TextField fx:id="titleBar" layoutX="137.0" layoutY="45.0" prefHeight="25.0" prefWidth="121.0" promptText="título" AnchorPane.rightAnchor="242.0" />
+            <Label layoutX="38.0" layoutY="79.0" text="Contenido" />
+            <TextField fx:id="contentBar" alignment="TOP_LEFT" layoutX="39.0" layoutY="104.0" prefHeight="91.0" prefWidth="429.0" promptText="texto ... :=)" />
+            <CheckBox fx:id="privateCheckBox" layoutX="39.0" layoutY="202.0" mnemonicParsing="false" text="Publicacion privada" />
+            <Button fx:id="visibilityButton" layoutX="312.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #470200;" text="Configurar Visibilidad" textFill="WHITE" />
+            <Button fx:id="postButton" layoutX="175.0" layoutY="290.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #470200;" text="Publicar" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

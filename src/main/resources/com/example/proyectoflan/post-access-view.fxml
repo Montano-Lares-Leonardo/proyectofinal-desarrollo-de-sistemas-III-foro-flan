@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.proyectoflan.PostAccessController">
+   <children>
+      <MenuBar prefHeight="15.0" prefWidth="300.0" style="-fx-background-color: #470200;">
+        <menus>
+          <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #A12F2B;" text="↺" textFill="WHITE" />
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="766.0" prefWidth="500.0" style="-fx-background-color: #FFCE96;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="14.0" prefHeight="17.0" prefWidth="130.0" text="ADMINISTRAR USUARIOS CON ACCESO AL POST" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Button onMouseReleased="#saveAccessConfiguration" fx:id="confirmButton" layoutX="134.0" layoutY="528.0" mnemonicParsing="false" style="-fx-background-color: #470200;" text="Aceptar" textFill="WHITE" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="120.0" />
+            <TableView fx:id="allowancelistTable" layoutX="60.0" layoutY="106.0" prefHeight="183.0" prefWidth="380.0">
+              <columns>
+                <TableColumn fx:id="whitelistCloumn" prefWidth="379.0" text="C1" />
+              </columns>
+            </TableView>
+            <Label contentDisplay="CENTER" layoutX="60.0" layoutY="74.0" prefHeight="25.0" prefWidth="239.0" text="Usuarios permitidos">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="60.0" layoutY="297.0" prefHeight="25.0" prefWidth="239.0" text="Usuarios excluidos">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="blacklistTable" layoutX="60.0" layoutY="322.0" prefHeight="183.0" prefWidth="380.0">
+               <columns>
+                  <TableColumn fx:id="blacklistColumn" prefWidth="378.0" text="C1" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

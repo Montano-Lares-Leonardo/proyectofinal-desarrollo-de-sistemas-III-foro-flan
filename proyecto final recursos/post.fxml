@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="830.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar style="-fx-background-color: #470200;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #A12F2B;" text="↺" textFill="WHITE" />
+               </graphic>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="671.0" prefWidth="762.0" style="-fx-background-color: #A12F2B;" VBox.vgrow="ALWAYS">
+      <children>
+            <Label fx:id="titleTxt" layoutX="30.0" layoutY="25.0" text="Titulo" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="authorTxt" layoutX="30.0" layoutY="56.0" text="Autor" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateTxt" layoutX="155.0" layoutY="56.0" prefHeight="22.0" prefWidth="53.0" text="Fecha" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="102.0" prefHeight="276.0" prefWidth="542.0" style="-fx-background-color: #FFCE96;" text="Texto" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="102.0">
+               <font>
+                  <Font name="Candara" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="editButton" layoutX="401.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #470200;" text="Editar" textFill="WHITE" />
+            <Button fx:id="deleteButton" layoutX="465.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #470200;" text="Borrar" textFill="WHITE" />
+            <Button fx:id="replyButton" layoutX="30.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #470200;" text="Responder a este post" textFill="WHITE" />
+            <TableView layoutX="30.0" layoutY="434.0" prefHeight="200.0" prefWidth="542.0" style="-fx-background-color: #FFCE96;">
+               <columns>
+                  <TableColumn fx:id="titleColumn" prefWidth="160.0" text="Título" />
+                  <TableColumn fx:id="authorColumn" prefWidth="90.0" text="Autor" />
+                  <TableColumn fx:id="contentColumn" prefWidth="310.0" text="Contenido" />
+               </columns>
+            </TableView>
+            <Button fx:id="searchButton" layoutX="30.0" layoutY="649.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #470200;" text="Búsqueda" textFill="WHITE" />
+            <TextField fx:id="searchBar" layoutX="135.0" layoutY="650.0" promptText="ingresa tu busqueda">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+            </TextField>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
