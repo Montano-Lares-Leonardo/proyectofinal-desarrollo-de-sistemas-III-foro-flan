@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 -- Database: `foroflan`
 --
 
-CREATE DATABASE foroflan;
+CREATE IF NOT EXISTS DATABASE foroflan;
 USE foroflan;
 
 CREATE USER 'forumuser'@'localhost' IDENTIFIED BY 'iloveflan';
@@ -84,7 +84,7 @@ CREATE TABLE `USURATO` (
   `user_ID` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `bio` text DEFAULT NULL,
-  `profile_picture` int(11) DEFAULT NULL,
+  `profile_picture` varchar(30) DEFAULT 'pfp/bepis',
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -92,9 +92,9 @@ CREATE TABLE `USURATO` (
 -- Dumping data for table `USURATO`
 --
 
-INSERT INTO `USURATO` (`user_ID`, `username`, `bio`, `profile_picture`, `password`) VALUES
-(1, 'wagoogus', 'ツツツツツ', NULL, 'p0ssw4rd'),
-(2, 'shampoo', 'Goooooooooggggg', NULL, 'zion');
+INSERT INTO `USURATO` (`user_ID`, `username`, `bio`, `password`) VALUES
+(1, 'wagoogus', 'ツツツツツ', 'p0ssw4rd'),
+(2, 'shampoo', 'Goooooooooggggg', 'zion');
 
 -- --------------------------------------------------------
 
