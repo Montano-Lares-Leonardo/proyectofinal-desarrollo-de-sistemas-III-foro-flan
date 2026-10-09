@@ -81,11 +81,11 @@ INSERT INTO `POST` (`post_ID`, `title`, `body`, `post_date`, `edit`, `private`, 
 --
 
 CREATE TABLE `USURATO` (
-                           `user_ID` int(11) NOT NULL,
-                           `username` varchar(50) NOT NULL,
-                           `bio` text DEFAULT NULL,
-                           `profile_picture` varchar(30) DEFAULT 'pfp/bepis',
-                           `password` varchar(20) NOT NULL
+  `user_ID` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `bio` text DEFAULT NULL,
+  `profile_picture` varchar(30) DEFAULT 'pfp/bepis',
+  `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -93,8 +93,8 @@ CREATE TABLE `USURATO` (
 --
 
 INSERT INTO `USURATO` (`user_ID`, `username`, `bio`, `password`) VALUES
-                                                                     (1, 'wagoogus', 'ツツツツツ', 'p0ssw4rd'),
-                                                                     (2, 'shampoo', 'Goooooooooggggg', 'zion');
+(1, 'wagoogus', 'ツツツツツ', 'p0ssw4rd'),
+(2, 'shampoo', 'Goooooooooggggg', 'zion');
 
 -- --------------------------------------------------------
 
